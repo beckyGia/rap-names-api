@@ -28,6 +28,10 @@ app.get("/", (request, response) => {
   response.sendFile(__dirname + "/index.html");
 });
 
+app.get("/api/rappers", (request, response) => {
+  response.json(rappers);
+});
+
 //create query parameters
 app.get("/api/rappers/:name", (request, response) => {
   const rapperName = request.params.name.toLowerCase();
